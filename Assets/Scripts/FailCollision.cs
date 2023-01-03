@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class FailCollision : MonoBehaviour
 {
+    private LevelManager levelManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
     // Update is called once per frame
@@ -16,6 +19,6 @@ public class FailCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Game over!");
+        levelManager.FailGame();
     }
 }
