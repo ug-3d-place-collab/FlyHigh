@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 
     public void AddNewPoint()
@@ -32,10 +37,21 @@ public class LevelManager : MonoBehaviour
     public void FailGame()
     {
         Debug.Log("Game over!");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void HitGoal()
     {
-        Debug.Log("Win!");
+        if (currentPoints >= totalPoints)
+        {
+            Debug.Log("Win!");
+            string sceneName = SceneManager.GetActiveScene().name;
+            int sceneNumber = int.Parse(sceneName.Substring(5));
+            sceneNumber++;
+            // TODO: Notify Menu about success
+            //LevelsMenu.ActivateToLevel(sceneNumber);
+            sceneName = "Level" + sceneNumber;
+            SceneManager.LoadScene(sceneName);
+        }
     }
 }
