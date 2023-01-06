@@ -48,8 +48,7 @@ public class LevelManager : MonoBehaviour
             string sceneName = SceneManager.GetActiveScene().name;
             int sceneNumber = int.Parse(sceneName.Substring(5));
             sceneNumber++;
-            // TODO: Notify Menu about success
-            //LevelsMenu.ActivateToLevel(sceneNumber);
+            LevelsMenu.ActivateToLevel(sceneNumber);
             sceneName = "Level" + sceneNumber;
             SceneManager.LoadScene(sceneName);
         }
