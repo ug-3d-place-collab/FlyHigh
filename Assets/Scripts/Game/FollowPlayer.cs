@@ -16,5 +16,6 @@ public class FollowPlayer : MonoBehaviour
     void LateUpdate()
     {
         transform.position = plane.transform.position + offset;
+        //transform.rotation.SetEulerRotation(transform.rotation.x, plane.transform.rotation.y, transform.rotation.z);
     }
 }

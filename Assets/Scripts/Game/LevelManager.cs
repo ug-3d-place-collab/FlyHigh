@@ -7,10 +7,12 @@ public class LevelManager : MonoBehaviour
 {
     private int totalPoints = 0;
     private int currentPoints = 0;
+    private ScoreKeeper scoreKeeper;
 
     // Start is called before the first frame update
     void Start()
     {
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     // Update is called once per frame
@@ -25,12 +27,14 @@ public class LevelManager : MonoBehaviour
     public void AddNewPoint()
     {
         totalPoints++;
+        scoreKeeper.SetScore(currentPoints, totalPoints);
         Debug.LogFormat("Initialized {0} points", totalPoints);
     }
 
     public void HitPoint()
     {
         currentPoints++;
+        scoreKeeper.SetScore(currentPoints, totalPoints);
         Debug.LogFormat("Found {0}/{1} points", currentPoints, totalPoints);
     }
 
