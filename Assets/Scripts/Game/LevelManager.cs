@@ -5,27 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public GameObject scoreCanvasPrefab;
     private int totalPoints = 0;
     private int currentPoints = 0;
     private ScoreKeeper scoreKeeper;
+    private LevelMenu levelMenu;
 
     // Start is called before the first frame update
     void Start()
     {
-        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        levelMenu = FindObjectOfType<LevelMenu>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("Menu");
-        }
     }
 
     public void AddNewPoint()
     {
+        if (scoreKeeper == null)
+        {
+            Instantiate(scoreCanvasPrefab);
+            scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        }
+
         totalPoints++;
         scoreKeeper.SetScore(currentPoints, totalPoints);
         Debug.LogFormat("Initialized {0} points", totalPoints);
@@ -41,20 +45,14 @@ public class LevelManager : MonoBehaviour
     public void FailGame()
     {
         Debug.Log("Game over!");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        levelMenu.EnableFailMenu();
     }
 
     public void HitGoal()
     {
         if (currentPoints >= totalPoints)
         {
-            Debug.Log("Win!");
-            string sceneName = SceneManager.GetActiveScene().name;
-            int sceneNumber = int.Parse(sceneName.Substring(5));
-            sceneNumber++;
-            LevelsMenu.ActivateToLevel(sceneNumber);
-            sceneName = "Level" + sceneNumber;
-            SceneManager.LoadScene(sceneName);
+            levelMenu.WinLevel();
         }
     }
 }

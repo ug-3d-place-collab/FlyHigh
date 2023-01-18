@@ -10,9 +10,6 @@ public class ScoreKeeper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textMeshPro = gameObject.GetComponentInChildren<TextMeshProUGUI>();
-        if (textMeshPro == null)
-            Debug.Log("Text not found");
     }
 
     // Update is called once per frame
@@ -22,7 +19,13 @@ public class ScoreKeeper : MonoBehaviour
 
     public void SetScore(int currentPoints, int maxPoints)
     {
-        if (textMeshPro != null)
-            textMeshPro.SetText(string.Format("Punkty {0}/{1}", currentPoints, maxPoints));
+        if (textMeshPro == null)
+        {
+            textMeshPro = gameObject.GetComponentInChildren<TextMeshProUGUI>();
+            if (textMeshPro == null)
+                Debug.Log("Text not found");
+        }
+
+        textMeshPro.SetText(string.Format("Punkty {0}/{1}", currentPoints, maxPoints));
     }
 }

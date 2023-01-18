@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e811e4b6a1dc03428cc7781b6d86272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreCanvasPrefab: {fileID: 8744845137443777730, guid: cf2bfcf0e182ffa469f0e931a8baa5ed, type: 3}
 --- !u!1 &1876754310206478342
 GameObject:
   m_ObjectHideFlags: 0
