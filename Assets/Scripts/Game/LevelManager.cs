@@ -44,6 +44,7 @@ public class LevelManager : MonoBehaviour
 
     public void FailGame()
     {
+        FindObjectOfType<AudioManager>().Play("BombSound");
         Debug.Log("Game over!");
         levelMenu.EnableFailMenu();
     }
@@ -52,6 +53,7 @@ public class LevelManager : MonoBehaviour
     {
         if (currentPoints >= totalPoints)
         {
+            FindObjectOfType<AudioManager>().Play("GoalSound");
             levelMenu.WinLevel();
         }
     }
