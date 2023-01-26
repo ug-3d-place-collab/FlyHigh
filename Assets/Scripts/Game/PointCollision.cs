@@ -23,6 +23,7 @@ public class PointCollision : MonoBehaviour
     {
         if (!isHit)
         {
+            FindObjectOfType<AudioManager>().Play("PointSound");
             isHit = true;
             levelManager.HitPoint();
             Destroy(gameObject);

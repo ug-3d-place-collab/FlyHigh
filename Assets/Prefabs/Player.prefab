@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 1876754312217108465}
   - component: {fileID: 1876754312217108478}
   - component: {fileID: 7034330172393310758}
+  - component: {fileID: -480902559328279729}
+  - component: {fileID: 8842926902311399245}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -159,6 +161,130 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreCanvasPrefab: {fileID: 8744845137443777730, guid: cf2bfcf0e182ffa469f0e931a8baa5ed, type: 3}
+--- !u!82 &-480902559328279729
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876754310206478340}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c370da3e985844a42b337a54408a9180, type: 2}
+  m_audioClip: {fileID: 8300000, guid: b3db7d0488af24946bb05fdb8b7cecd0, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &8842926902311399245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876754310206478340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c444dd573d1d1a54f8ffa0f383df96bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: GoalSound
+    clip: {fileID: 8300000, guid: afefff873321d87438d3a9d4df416a7d, type: 3}
+    volume: 0.3
+    pitch: 1
+    source: {fileID: 0}
+  - name: PointSound
+    clip: {fileID: 8300000, guid: 3dc6d2c6d83a80a4f87c7124195535c3, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: BombSound
+    clip: {fileID: 8300000, guid: b5a139ecb1e7bc94ba43dc1b3c80fa92, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
 --- !u!1 &1876754310206478342
 GameObject:
   m_ObjectHideFlags: 0
