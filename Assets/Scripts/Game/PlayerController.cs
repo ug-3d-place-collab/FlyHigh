@@ -25,9 +25,10 @@ public class PlayerController : MonoBehaviour
         // tilt the plane up/down based on up/down arrow keys
         transform.Rotate(-rotationSpeed * verticalInput * Time.deltaTime * Vector3.right);
 
-        //var angles = transform.localEulerAngles;
-        //angles.z = -horizontalInput * 20;
-        //transform.localEulerAngles = angles;
-        //transform.Rotate(rotationSpeed * horizontalInput * Time.deltaTime * Vector3.up);
+        var angles = transform.localEulerAngles;
+        angles.z = -horizontalInput * 20;
+        transform.localEulerAngles = angles;
+
+        transform.Rotate(rotationSpeed * horizontalInput * Time.deltaTime * Vector3.up);
     }
 }

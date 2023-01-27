@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4717596344281395965}
   - component: {fileID: 6249256033091987462}
   - component: {fileID: 6249256033091987461}
+  - component: {fileID: 8631257007968247592}
   m_Layer: 0
   m_Name: Point
   m_TagString: Untagged
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -905690159841262435, guid: cd93e853c98db7240a832de3c2642e68, type: 3}
+  - {fileID: 2100000, guid: e3b662f564e7d114d8f59e345ff67197, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,8 +97,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0026208763, y: 0.018987363, z: 0.018086452}
-  m_Center: {x: 0, y: 0, z: 0.00095812447}
+  m_Size: {x: 0.0026208763, y: 0.02425992, z: 0.021490257}
+  m_Center: {x: 0, y: 0.00020656823, z: 0.0005896079}
 --- !u!114 &6249256033091987461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,3 +111,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba8f198b40420740998198adf4ac8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8631257007968247592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6519163395143193384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae49e4a353fd8f4089c0bf317872008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -40
