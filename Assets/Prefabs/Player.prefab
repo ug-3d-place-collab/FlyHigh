@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1876754312217108479}
   - component: {fileID: 1876754312217108465}
   - component: {fileID: 1876754312217108478}
-  - component: {fileID: 7034330172393310758}
   - component: {fileID: -480902559328279729}
   - component: {fileID: 8842926902311399245}
   m_Layer: 0
@@ -148,19 +147,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   rotationSpeed: 50
---- !u!114 &7034330172393310758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876754310206478340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e811e4b6a1dc03428cc7781b6d86272, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreCanvasPrefab: {fileID: 8744845137443777730, guid: cf2bfcf0e182ffa469f0e931a8baa5ed, type: 3}
 --- !u!82 &-480902559328279729
 AudioSource:
   m_ObjectHideFlags: 0
