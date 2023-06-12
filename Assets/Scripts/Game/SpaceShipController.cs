@@ -16,16 +16,15 @@ public class SpaceShipController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // get the user's vertical input
+        // get the user's input
         float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
 
-        // move the plane forward at a constant rate
+        // move the spaceship forward at a constant rate
         transform.Translate(speed * Time.deltaTime * Vector3.back);
 
-        // tilt the plane up/down based on up/down arrow keys
+        // tilt the spaceship up/down based on up/down arrow keys
         transform.Rotate(-rotationSpeed * verticalInput * Time.deltaTime * Vector3.left);
         transform.Rotate(rotationSpeed * horizontalInput * Time.deltaTime * Vector3.up);
-        // take QW and rotate on Z
     }
 }
